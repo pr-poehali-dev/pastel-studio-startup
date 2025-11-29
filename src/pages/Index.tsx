@@ -196,12 +196,12 @@ const Index = () => {
               <Card>
                 <CardContent className="p-6">
                   {[
-                    { service: 'Платье простое', price: 'от 3500 ₽' },
-                    { service: 'Платье сложное', price: 'от 6000 ₽' },
-                    { service: 'Брюки', price: 'от 2500 ₽' },
-                    { service: 'Юбка', price: 'от 2000 ₽' },
-                    { service: 'Блузка', price: 'от 2800 ₽' },
-                    { service: 'Пиджак', price: 'от 4500 ₽' },
+                    { service: 'Платье простое', price: 'от 1750 ₽' },
+                    { service: 'Платье сложное', price: 'от 3000 ₽' },
+                    { service: 'Брюки', price: 'от 1250 ₽' },
+                    { service: 'Юбка', price: 'от 1000 ₽' },
+                    { service: 'Блузка', price: 'от 1400 ₽' },
+                    { service: 'Пиджак', price: 'от 2250 ₽' },
                   ].map((item, i) => (
                     <div key={i} className="flex justify-between py-3 border-b last:border-0">
                       <span>{item.service}</span>
@@ -215,11 +215,11 @@ const Index = () => {
               <Card>
                 <CardContent className="p-6">
                   {[
-                    { service: 'Замена молнии', price: 'от 400 ₽' },
-                    { service: 'Ремонт подкладки', price: 'от 600 ₽' },
-                    { service: 'Штопка', price: 'от 300 ₽' },
-                    { service: 'Замена пуговиц', price: 'от 150 ₽' },
-                    { service: 'Ремонт карманов', price: 'от 500 ₽' },
+                    { service: 'Замена молнии', price: 'от 200 ₽' },
+                    { service: 'Ремонт подкладки', price: 'от 300 ₽' },
+                    { service: 'Штопка', price: 'от 150 ₽' },
+                    { service: 'Замена пуговиц', price: 'от 75 ₽' },
+                    { service: 'Ремонт карманов', price: 'от 250 ₽' },
                   ].map((item, i) => (
                     <div key={i} className="flex justify-between py-3 border-b last:border-0">
                       <span>{item.service}</span>
@@ -233,11 +233,11 @@ const Index = () => {
               <Card>
                 <CardContent className="p-6">
                   {[
-                    { service: 'Укоротить брюки', price: 'от 400 ₽' },
-                    { service: 'Ушить по фигуре', price: 'от 800 ₽' },
-                    { service: 'Удлинить изделие', price: 'от 700 ₽' },
-                    { service: 'Расширить изделие', price: 'от 900 ₽' },
-                    { service: 'Комплексная подгонка', price: 'от 1500 ₽' },
+                    { service: 'Укоротить брюки', price: 'от 200 ₽' },
+                    { service: 'Ушить по фигуре', price: 'от 400 ₽' },
+                    { service: 'Удлинить изделие', price: 'от 350 ₽' },
+                    { service: 'Расширить изделие', price: 'от 450 ₽' },
+                    { service: 'Комплексная подгонка', price: 'от 750 ₽' },
                   ].map((item, i) => (
                     <div key={i} className="flex justify-between py-3 border-b last:border-0">
                       <span>{item.service}</span>
@@ -400,12 +400,12 @@ const Calculator = () => {
   const [totalPrice, setTotalPrice] = useState(0);
 
   const basePrice: Record<string, number> = {
-    'dress': 3500,
-    'pants': 2500,
-    'skirt': 2000,
-    'blouse': 2800,
-    'jacket': 4500,
-    'coat': 6000,
+    'dress': 1750,
+    'pants': 1250,
+    'skirt': 1000,
+    'blouse': 1400,
+    'jacket': 2250,
+    'coat': 3000,
   };
 
   const complexityMultiplier: Record<string, number> = {
@@ -415,10 +415,10 @@ const Calculator = () => {
   };
 
   const additionalPrices: Record<string, number> = {
-    'lining': 800,
-    'decoration': 1200,
-    'zipper': 400,
-    'pockets': 600,
+    'lining': 400,
+    'decoration': 600,
+    'zipper': 200,
+    'pockets': 300,
   };
 
   const calculatePrice = () => {
@@ -482,10 +482,10 @@ const Calculator = () => {
               <Label>Дополнительные услуги</Label>
               <div className="space-y-3">
                 {[
-                  { id: 'lining', label: 'Подкладка (+800 ₽)', value: 'lining' },
-                  { id: 'decoration', label: 'Декорирование (+1200 ₽)', value: 'decoration' },
-                  { id: 'zipper', label: 'Потайная молния (+400 ₽)', value: 'zipper' },
-                  { id: 'pockets', label: 'Дополнительные карманы (+600 ₽)', value: 'pockets' },
+                  { id: 'lining', label: 'Подкладка (+400 ₽)', value: 'lining' },
+                  { id: 'decoration', label: 'Декорирование (+600 ₽)', value: 'decoration' },
+                  { id: 'zipper', label: 'Потайная молния (+200 ₽)', value: 'zipper' },
+                  { id: 'pockets', label: 'Дополнительные карманы (+300 ₽)', value: 'pockets' },
                 ].map((service) => (
                   <div key={service.id} className="flex items-center space-x-2">
                     <Checkbox
