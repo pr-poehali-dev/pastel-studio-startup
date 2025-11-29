@@ -71,8 +71,12 @@ const Index = () => {
                 </Button>
               </div>
             </div>
-            <div className="relative">
-              <div className="aspect-square rounded-3xl bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 animate-scale-in"></div>
+            <div className="relative animate-scale-in">
+              <img 
+                src="https://cdn.poehali.dev/projects/6c54fe3d-395b-4c2a-9e3c-fe0d231f0ffa/files/94cc297d-45e1-4460-81ae-c556a005921d.jpg" 
+                alt="Интерьер ателье" 
+                className="aspect-square rounded-3xl object-cover w-full shadow-2xl"
+              />
             </div>
           </div>
         </div>
