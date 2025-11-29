@@ -86,15 +86,21 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { title: 'Вечерние платья', items: '24 проекта', color: 'from-primary/20 to-primary/5' },
-              { title: 'Костюмы', items: '18 проектов', color: 'from-secondary/20 to-secondary/5' },
-              { title: 'Свадебные наряды', items: '32 проекта', color: 'from-accent/20 to-accent/5' },
+              { title: 'Вечерние платья', items: '24 проекта', image: 'https://cdn.poehali.dev/projects/6c54fe3d-395b-4c2a-9e3c-fe0d231f0ffa/files/99f4e8e6-bd73-4f67-ae80-3068cf29a617.jpg' },
+              { title: 'Костюмы', items: '18 проектов', image: 'https://cdn.poehali.dev/projects/6c54fe3d-395b-4c2a-9e3c-fe0d231f0ffa/files/c7a4bbe3-593b-4c2e-9c41-b67b68eb3bdb.jpg' },
+              { title: 'Свадебные наряды', items: '32 проекта', image: 'https://cdn.poehali.dev/projects/6c54fe3d-395b-4c2a-9e3c-fe0d231f0ffa/files/61c38052-74b8-4c48-b64b-cfc4d0c6782c.jpg' },
               { title: 'Повседневная одежда', items: '45 проектов', color: 'from-muted to-muted/20' },
               { title: 'Детская одежда', items: '28 проектов', color: 'from-primary/15 to-accent/10' },
               { title: 'Ремонт и реставрация', items: '67 проектов', color: 'from-secondary/15 to-primary/10' },
             ].map((item, i) => (
               <Card key={i} className="group overflow-hidden hover-scale cursor-pointer">
-                <div className={`h-48 bg-gradient-to-br ${item.color} transition-all group-hover:scale-105`}></div>
+                {item.image ? (
+                  <div className="h-48 overflow-hidden">
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-all group-hover:scale-105" />
+                  </div>
+                ) : (
+                  <div className={`h-48 bg-gradient-to-br ${item.color} transition-all group-hover:scale-105`}></div>
+                )}
                 <CardHeader>
                   <CardTitle className="text-xl">{item.title}</CardTitle>
                   <CardDescription>{item.items}</CardDescription>
