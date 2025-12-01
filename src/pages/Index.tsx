@@ -55,7 +55,6 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
-              <Badge className="bg-accent text-accent-foreground">Индивидуальный пошив с 2015 года</Badge>
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                 Создаём одежду вашей мечты
               </h1>
