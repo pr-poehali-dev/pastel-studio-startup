@@ -26,7 +26,7 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold text-primary">Ателье</h1>
+            <h1 className="text-2xl font-bold text-primary">Точный крой</h1>
             <div className="hidden md:flex gap-6">
               {['home', 'portfolio', 'services', 'about', 'pricing', 'reviews', 'calculator', 'contacts'].map((section) => (
                 <button
@@ -371,8 +371,8 @@ const Index = () => {
 
       <footer className="bg-muted/50 py-12 px-4 mt-20">
         <div className="container mx-auto max-w-6xl text-center">
-          <h2 className="text-2xl font-bold mb-4 text-primary">Ателье</h2>
-          <p className="text-muted-foreground mb-6">Создаём одежду вашей мечты с 2015 года</p>
+          <h2 className="text-2xl font-bold mb-4 text-primary">Точный крой</h2>
+          <p className="text-muted-foreground mb-6">Создаём одежду вашей мечты</p>
           <div className="flex justify-center gap-4">
             <Button variant="ghost" size="icon">
               <Icon name="Instagram" size={20} />
@@ -385,7 +385,7 @@ const Index = () => {
             </Button>
           </div>
           <Separator className="my-8" />
-          <p className="text-sm text-muted-foreground">© 2024 Ателье. Все права защищены.</p>
+          <p className="text-sm text-muted-foreground">© 2024 Точный крой. Все права защищены.</p>
         </div>
       </footer>
     </div>
